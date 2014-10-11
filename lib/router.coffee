@@ -1,2 +1,3 @@
 Router.map ->
-  @route "map", { path: '/'}
+  @route "dataTable", { path: '/'}
+  @route "map", { path: '/map'}
