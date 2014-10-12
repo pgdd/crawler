@@ -317,7 +317,11 @@ observeSettings = () ->
   )
 
 observeSettings()
-Meteor.publish('searchs')
-Meteor.publish('settings')
-Meteor.publish('bounds')
-Meteor.publish('markers')
+Meteor.publish('searchs', ->
+  return Searchs.find())
+Meteor.publish('settings', ->
+  return Settings.find())
+# Meteor.publish('bounds',
+#   return Bounds.find)
+Meteor.publish('markers', ->
+  return Markers.find())
