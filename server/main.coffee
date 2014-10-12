@@ -1,5 +1,5 @@
-Meteor.publish('settings')
-Meteor.publish('searchs')
+  # Meteor.publish('settings')
+# Meteor.publish('searchs')
 uuuRl = undefined
 # val = 0 - (NWlng - lon0)
 valY = undefined
@@ -271,7 +271,7 @@ generateBounds = (lonLim, latLim) ->
 launchCrawler = () ->
   console.log 'define settings'
   arrayOfSettings = Settings.find({}).fetch()
-  console.log "arrayOfSettings in launch" + arrayOfSettings
+  console.log "arrayOfSettings in launchf" + arrayOfSettings
   arrayOfInfo = []
   arrayOfSearchsId = []
   for key, object of arrayOfSettings
@@ -319,3 +319,5 @@ observeSettings = () ->
 observeSettings()
 Meteor.publish('searchs')
 Meteor.publish('settings')
+Meteor.publish('bounds')
+Meteor.publish('markers')
